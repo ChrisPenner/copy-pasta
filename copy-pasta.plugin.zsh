@@ -9,7 +9,6 @@ copy() {(
     # Exit on missing vars or failure for safety
     set -u
     set -e
-    set -x
     # Don't print errors on glob fail
     setopt +o nomatch
 
@@ -35,7 +34,6 @@ pasta() {(
     # Exit on missing vars or failure for safety
     set -u
     set -e
-    set -x
     # Don't print errors on glob fail
     setopt +o nomatch
 
@@ -51,6 +49,10 @@ EOF
         local dest="."
     else
         local dest="$1"
+        if ! [ -d "$dest" ] ; then
+            echo "Creating $dest directory" >&2;
+            mkdir -p "$dest"
+        fi
     fi
 
     if [ ! -d "$copy_pasta_folder" ]; then
@@ -60,5 +62,5 @@ EOF
         return 1
     fi
 
-    cp -r "$copy_pasta_folder"/{*,.*} "$dest" 2>/dev/null || true
+    cp -r "$copy_pasta_folder"/{*,.*} "$dest" 2> /dev/null || true
 )}
