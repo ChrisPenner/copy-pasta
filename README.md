@@ -2,6 +2,9 @@
 
 Use at your own risk. I use it daily without trouble, and have tried my best to make it safe to use, but I'm not responsible if it causes you to delete files by accident. Cheers!
 
+
+[![asciicast](https://asciinema.org/a/etRqNM09mR9CgLRCVYAPQqM9d.svg)](https://asciinema.org/a/etRqNM09mR9CgLRCVYAPQqM9d)
+
 Copy Pasta is a shell utility which let's you copy and paste in your terminal as you're used to doing in your GUI.
 
 It works like this:
