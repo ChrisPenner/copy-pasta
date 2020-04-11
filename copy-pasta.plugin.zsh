@@ -14,7 +14,13 @@ copy() {(
 
     if [ $# -lt 1 ]; then
         cat << EOF
-usage: copy <files and directories to copy>
+Usage:
+
+  copy <files and directories to copy>
+
+  pasta [destination dir]
+    If destination dir is omitted the current directory is used.
+    If the destination dir does not exist it will be created.
 EOF
     return 1
     fi
@@ -40,9 +46,12 @@ pasta() {(
     if [ $# -gt 1 ]; then
         cat >&2 << EOF
 Usage:
-  pasta [destination dir]
 
-If destination dir is omitted the current directory is used.
+  copy <files and directories to copy>
+
+  pasta [destination dir]
+    If destination dir is omitted the current directory is used.
+    If the destination dir does not exist it will be created.
 EOF
         return 1
     elif [ $# -eq 0 ]; then
