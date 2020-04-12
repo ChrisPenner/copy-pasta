@@ -1,5 +1,13 @@
 # Copy Pasta
 
+<!-- toc GFM -->
+
+* [Compatibility](#compatibility)
+* [Installation options:](#installation-options)
+* [Usage](#usage)
+
+<!-- tocstop -->
+
 Use at your own risk. I use it daily without trouble, and have tried my best to make it safe to use, but I'm not responsible if it causes you to delete files by accident. Cheers!
 
 
