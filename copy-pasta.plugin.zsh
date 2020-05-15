@@ -2,10 +2,9 @@
 
 # Use at your own risk :P
 
-local copy_pasta_folder="/tmp/copy-pasta"
-
 # Operates in a subshell so we can exit on errors for safety
 copy() {(
+    local copy_pasta_folder="/tmp/copy-pasta"
     # Exit on missing vars or failure for safety
     set -u
     set -e
@@ -37,6 +36,7 @@ EOF
 
 # Operates in a subshell so we can exit on errors for safety
 pasta() {(
+    local copy_pasta_folder="/tmp/copy-pasta"
     # Exit on missing vars or failure for safety
     set -u
     set -e
